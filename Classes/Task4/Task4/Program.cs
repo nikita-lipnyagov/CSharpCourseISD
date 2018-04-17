@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,16 +37,17 @@ namespace Task4
 
     class Figure
     {
-       
-        public Figure (Point A, Point B, Point C)
+       private: Point A,B,C,D,E;
+
+        public Figure (Point A, Point B, Point C) : A(A), B(B), C(C)
+        {
+
+        }
+        public Figure(Point A, Point B, Point C, Point D) : Figure(A,B,C), D(D)
         {
             
         }
-        public Figure(Point A, Point B, Point C, Point D)
-        {
-            
-        }
-        public Figure(Point A, Point B, Point C, Point D, Point E)
+        public Figure(Point A, Point B, Point C, Point D, Point E) : Figure(A,B,C,D), E(E)
         {
             
         }
@@ -58,7 +59,9 @@ namespace Task4
 
         void PerimeterCalculator()
         {
-            
+            double sum;
+            sum  = LengthSide(A,B) + LengthSide(B,C) + LengthSide(C,D) + LengthSide(D,E) + LengthSide(E,A);
+            Console.Write(sum);
         }
 
     }
