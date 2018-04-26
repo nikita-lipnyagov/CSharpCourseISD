@@ -40,7 +40,7 @@ namespace Task1
         }
     }
 
-     class TXTHandler : AbstractHandler
+     publicclass TXTHandler : AbstractHandler
     {
         public TXTHandler()
         {
